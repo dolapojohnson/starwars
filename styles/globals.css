@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  margin: auto;
+}
+
+.bgWrap {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.explore-btn {
+  background: yellow;
+  color: #000;
+  border-radius: 2px;
+}
+
+.center-img {
+  justify-content: center;
+  margin: auto;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.dropbtn {
+  background: yellow;
+  color: #000;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: yellow;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #e1efe1;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70vw;
+  margin: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+}
+
+table {
+  font-size: 1vw;
+}
+
+.crawl_container {
+  font-size: 2.9vw;
+  line-height: 1.2;
+  overflow: hidden;
+  margin: 0 auto;
+  perspective: 380px;
+  perspective-origin: bottom;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: visible;
+  transform: scaleY(0.9);
+}
+
+.credits {
+  top: 0;
+  left: 13%;
+  right: 13%;
+  height: 100%;
+  animation: play 2s infinite;
+  animation-duration: 40s;
+}
+
+p {
+  padding: 0.5rem 0;
+}
+
+@keyframes play {
+  0% {
+    transform: rotateX(21deg) translate3d(0, 1rem, 0);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(21deg) translate3d(0, -10rem, 0);
+    opacity: 0;
+  }
+}
+
+
