@@ -30,7 +30,7 @@ const MovieList = ({ films }) => {
                         <button className="dropbtn font-bold">View StarWars Episodes </button>
                         <div className="dropdown-content mt-2 divide-y divide-blue-200 font-medium">
                               {films.results.map((movie, index) => <Link
-                               href={`movies/${index + 1}`} key={movie.episode_id} passHref>{movie.title}</Link>)
+                               href={`movies/${index+1}`} key={movie.episode_id} passHref>{movie.title}</Link>)
                               }
                         </div>
                   </div>
